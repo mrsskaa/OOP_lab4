@@ -81,7 +81,7 @@ const BankProduct* ProductCollection::MaxMetricProduct() const {
     double best_metric = best->metric();
     for (std::size_t i = 1; i < size_; ++i) {
         const double current_metric = products_[i]->metric();
-        // Действительно равные метрики сохраняют порядок добавления.
+
         if (current_metric > best_metric) {
             best = products_[i].get();
             best_metric = current_metric;
